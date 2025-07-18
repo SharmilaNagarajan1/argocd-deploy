@@ -15,7 +15,7 @@ spec:
         app: login-service
     spec:
       containers:
-      - name: nginx
+      - name: login-service
         image: sharmila231/login-service:latest
         ports:
         - containerPort: 80
