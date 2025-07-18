@@ -1,0 +1,31 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: microservices-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /login(/|$)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: login
+                port:
+                  number: 80
+          - path: /payment(/|$)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: payment
+                port:
+                  number: 80
+          - path: /checkout(/|$)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: checkout
+                port:
+                  number: 80
