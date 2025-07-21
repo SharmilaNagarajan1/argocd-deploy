@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: login-service
-        image: sharmila231/login-service:f4627cee1bbe861a33d590f9f7e4ccfabf18dd4d
+        image: sharmila231/login-service:82f39779368f6a6a4c80fef421914b3c82e28f07
         ports:
         - containerPort: 80
 ---
