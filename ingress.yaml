@@ -7,9 +7,9 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: *
-      http:
-        paths:
+  - host: *
+    http:
+       paths:
           - path: /login
             pathType: Prefix
             backend:
